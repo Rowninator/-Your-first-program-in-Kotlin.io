@@ -1,0 +1,2019 @@
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Android Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#3ddc84"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/android/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program"><link rel="search" type="application/opensearchdescription+xml"
+            title="Android Developers" href="https://developer.android.com/s/opensearch.xml">
+      
+
+<title>Your first program in Kotlin &nbsp;|&nbsp; Android Developers</title>
+
+<meta property="og:title" content="Your first program in Kotlin &nbsp;|&nbsp; Android Developers"><meta name="description" content="Learn how to create and modify simple programs in Kotlin.">
+  <meta property="og:description" content="Learn how to create and modify simple programs in Kotlin."><meta property="og:url" content="https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program"><meta property="og:locale" content="en">
+  <meta name="xsrf_token" content="nULEMUPYXVBVIFbaRDpjUtzz9n7Df71kBONlJTSMFfI6MTY2NjI5ODkzMTc5MTA1Mg">
+  
+
+  <meta name="session_expiry" content="1666301304">
+  
+    
+    
+    
+    <meta name="original_source" content="https://docs.google.com/document/d/1Mz6YHGsbPevlzJ6fa-ppoP-CcLR6zSoHoGnKusQAZA8/edit" />
+    
+    
+    
+    
+    
+    
+  
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="codelab"
+        theme="android-theme"
+        type="codelab"
+        
+        
+        
+        layout="docs"
+        
+        
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper"><devsite-header>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+
+  
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+  
+
+</a>
+
+
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+           </div>
+          
+<devsite-search
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    tenant-name="Android Developers"
+    
+    
+    
+    
+    
+    
+    role="combobox">
+  <form class="devsite-search-form" action="https://developer.android.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-haspopup="false"
+          aria-multiline="false"
+          aria-label="Search box"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="searchbox"
+          type="text"
+          value=""
+          >
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        
+          aria-current="true">English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Bahasa Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user signed-in
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars hidden>
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter
+            hidden">
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+
+  
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+  
+
+</a>
+
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+            has-sidebar>
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+              <devsite-toc class="devsite-nav"
+                           role="navigation"
+                           aria-label="On this page"
+                           depth="1"
+                           scrollbars
+                ></devsite-toc>
+              <devsite-recommendations-sidebar class="nocontent devsite-nav">
+              </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      body {
+        transition: opacity ease-in 0.2s;
+      }
+
+      body[unresolved] {
+        opacity: 0;
+        display: block;
+        overflow: hidden;
+        position: relative;
+      }
+      </style>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+</ul>
+    
+  </div>
+  <h1 class="devsite-page-title">Your first program in Kotlin</h1><devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events",
+          analytics-action-show="Callout Profile displayed",
+          analytics-action-close="Callout Profile dismissed",
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+    
+  
+  <devsite-toc class="devsite-nav"
+               depth="1"
+               devsite-toc-embedded
+               >
+  </devsite-toc>
+
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+    <google-codelab codelab-gaid="UA-81734179-1"
+                    doc-id="1Mz6YHGsbPevlzJ6fa-ppoP-CcLR6zSoHoGnKusQAZA8"
+                    id="basic-android-kotlin-compose-first-program"
+                    title="Your first program in Kotlin"
+                    environment="web"
+                    category="android,kotlin"
+                    feedback-link="https://github.com/google-developer-training/basic-android-kotlin-compose-birthday-card-app/issues/new?assignees=&amp;labels=&amp;template=your_first_program.md&amp;title=Your&#43;first&#43;program%3A&#43;Android&#43;Basics&#43;in&#43;Compose"
+                    layout="paginated"
+                    >
+      
+        <google-codelab-step label="Before you begin" duration="2" step="0">
+          
+            <google-codelab-about codelab-title="Your first program in Kotlin"
+                                  authors="Google Developers Training team"
+                                  last-updated="2022-04-29T22:34:13Z"
+                                  duration="60">
+            </google-codelab-about>
+          
+          <h2 class="step-title" id="0" data-text="Before you begin">
+              1. Before you begin
+          </h2>
+          <p class="image-container"><img alt="Android with Kotlin logo" style="width: 385.50px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/3bbebda874e6003b.png"></p>
+<p>In this course, you will build apps by writing code in the Kotlin programming language, which is the recommended language by Google for creating new Android apps.</p>
+<p>Kotlin is a modern programming language that helps developers be more productive. For example, Kotlin allows you to be more concise and write fewer lines of code for the same functionality compared to other programming languages. Apps that are built with Kotlin are also less likely to crash, resulting in a more stable and robust app for users. Essentially, with Kotlin, you can write better Android apps in a shorter amount of time. As a result, Kotlin is gaining momentum in the industry and is the language that the majority of professional Android developers use.</p>
+<p>To get started on building Android apps in Kotlin, it&#39;s important to first establish a solid foundation of programming concepts in Kotlin. With the codelabs in this pathway, you will learn about Kotlin programming basics before diving into app creation.</p>
+<h2 is-upgraded id="what-youll-build" data-text="What you'll build"><strong>What you'll build</strong></h2>
+<ul>
+<li>Short programs in Kotlin that display messages when you run them.</li>
+</ul>
+<h2 class="checklist" is-upgraded id="what-youll-learn" data-text="What you'll learn"><strong>What you'll learn</strong></h2>
+<ul class="checklist">
+<li>How to write and run a simple Kotlin program.</li>
+<li>How to modify a simple program to change the output.</li>
+</ul>
+<h2 is-upgraded id="what-youll-need" data-text="What you'll need"><strong>What you'll need</strong></h2>
+<ul>
+<li>A computer with internet access and a web browser.</li>
+</ul>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Get started" duration="3" step="1">
+          
+          <h2 class="step-title" id="1" data-text="Get started">
+              2. Get started
+          </h2>
+          <p>In this codelab, you explore and modify simple programs in Kotlin. You can think of a <em>program</em> as a series of instructions for a computer or mobile device to perform some action, such as display a message to a user or calculate the cost of items in a shopping cart. The step-by-step instructions for what the computer should do is called <em>code</em>. When you modify the code in a program, the output can change.</p>
+<p>You use a tool called a <em>code editor</em> to write and edit your code. It&#39;s similar to a text editor in which you can write and edit text, but a code editor also provides functionality to help you write code more accurately. For example, a code editor shows autocomplete suggestions while you type, and displays error messages when code is incorrect.</p>
+<p>To practice the basics of the Kotlin language, you will use an interactive code editor called the Kotlin Playground. You can access it from a web browser, so you don&#39;t need to install any software on your computer. You can edit and run Kotlin code directly in the Kotlin Playground and see the output.</p>
+<p>Note that you can&#39;t build Android apps within the Kotlin Playground. In later pathways, you will install and use a tool called Android Studio to write and edit your Android app code.</p>
+<p>Now that you have some context on Kotlin, take a look at your first program!</p>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Open Kotlin Playground" duration="2" step="2">
+          
+          <h2 class="step-title" id="2" data-text="Open Kotlin Playground">
+              3. Open Kotlin Playground
+          </h2>
+          <p>In a web browser on your computer, open the  <a href="https://developer.android.com/training/kotlinplayground" target="_blank">Kotlin Playground</a>.</p>
+<p>You should see a web page similar to this image:</p>
+<p class="image-container"><img alt="This shows a screenshot of the Kotlin Playground. The code editor shows a simple program for printing out &#34;Hello, world!&#34; to the output." style="width: 624.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/73637fd10c41e9f8.png"></p>
+<p>There&#39;s already some default code populated in the code editor. These three lines of code make up a simple program:</p>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Hello, world!&#34;)
+}
+</code></pre>
+<p>Even if you&#39;ve never programmed before, can you guess what the program does?</p>
+<p>See if your guess is correct by moving onto the next section!</p>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Run your first program" duration="5" step="3">
+          
+          <h2 class="step-title" id="3" data-text="Run your first program">
+              4. Run your first program
+          </h2>
+          <p>Click  <img alt="Run button" style="width: 21.54px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/6c206d378c2cc50f.png"> to run your program.</p>
+<p>When you click the Run button, a lot happens. Code in the Kotlin programming language is meant to be understood by humans, so that people can more easily read, write, and collaborate on Kotlin programs. However, your computer doesn&#39;t immediately understand this language.</p>
+<p>You need something called the <em>Kotlin compiler</em>, which takes the Kotlin code you wrote, looks at it line by line, and translates it into something that the computer can understand. This process is called <em>compiling</em> your code.</p>
+<p>If your code compiles successfully, your program will run (or execute). When the computer executes your program, it performs each of your instructions. If you&#39;ve ever followed a cooking recipe, performing each step in the recipe is considered executing each instruction.</p>
+<p>Here&#39;s a screenshot of what you should see when you run your program.</p>
+<p class="image-container"><img alt="This screenshot shows a portion of the webpage of the Kotlin Playground. The code editor displays code for a Hello world program. Below the code editor is an output pane that displays the phrase &#34;Hello, world!&#34;. " style="width: 624.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/14bea1122ec05039.png"></p>
+<p>At the bottom of the code editor, you should see a pane that shows the output, or result, of your program:</p>
+<pre translate="no" dir="ltr">Hello, world!
+</pre>
+<p>Cool! The purpose of this program is to print or display a message that says <code translate="no" dir="ltr">Hello, world!</code>.</p>
+<aside class="warning"><p><strong>Warning:</strong> If you don&#39;t see this result, copy and paste the three lines of code from the previous section into the Kotlin Playground and try again.</p>
+</aside>
+<p>How does this work? A Kotlin program is required to have a <em>main function</em>, which is the specific place in your code where the Kotlin compiler starts. The main function is the entry point, or starting point, of the program.</p>
+<p class="image-container"><img alt="There is an arrow pointing to the first line of the main function of a simple program with a label that says &#34;Start Here&#34;. " style="width: 624.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/83ab3fdb0a8c2304.png"></p>
+<p>Now you may be wondering, what is a function?</p>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Parts of a function" duration="5" step="4">
+          
+          <h2 class="step-title" id="4" data-text="Parts of a function">
+              5. Parts of a function
+          </h2>
+          <p>A <em>function</em> is a segment of a program that performs a specific task. You can have many functions in your program or only a single one.</p>
+<h2 is-upgraded id="define-vs.-call-a-function" data-text="Define vs. call a function"><strong>Define vs. call a function</strong></h2>
+<p>In your code, you <em>define</em> a function first. That means you specify all the instructions needed to perform that task.</p>
+<p>Once the function is defined, then you can <em>call</em> that function, so the instructions within that function can be performed or executed.</p>
+<p>Here&#39;s an analogy. You write out step-by-step instructions on how to bake a chocolate cake. This set of instructions can have a name: <code translate="no" dir="ltr">bakeChocolateCake</code>. Every time you want to bake a cake, you can execute the <code translate="no" dir="ltr">bakeChocolateCake</code> instructions. If you want 3 cakes, you need to execute the <code translate="no" dir="ltr">bakeChocolateCake</code> instructions 3 times. The first step is defining the steps and giving it a name, which is considered defining the function. Then you can refer to the steps anytime you want them to be executed, which is considered calling the function.</p>
+<aside class="special"><p><strong>Note:</strong> You may hear the alternate phrase &#34;declare a function.&#34; The words declare and define can be used interchangeably and have the same meaning. You may also hear the term &#34;function definition&#34; or &#34;function declaration&#34;, which refer to the exact code that defines a function.</p>
+</aside>
+<h2 is-upgraded id="define-a-function" data-text="Define a function"><strong>Define a function</strong></h2>
+<p>These are the key parts needed to define a function:</p>
+<ul>
+<li>The function needs a <strong>name</strong>, so you can call it later.</li>
+<li>The function can also require some <strong>inputs</strong>, or information that needs to be provided when the function is called. The function uses these inputs to accomplish its purpose. Requiring inputs are optional, and some functions require no inputs.</li>
+<li>The function also has a <strong>body</strong> which contains the instructions to perform the task.</li>
+</ul>
+<p class="image-container"><img alt="This diagram represents a function as a black box with the label &#34;name&#34; on it, which is the function name. Within the function box is a smaller box called body, representing the function body within the function. There is also a label called inputs with an arrow pointing into the function black box, indicating that there are function inputs passed into the function." style="width: 384.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/cba1185914724301.png"></p>
+<p>To translate the above diagram into Kotlin code, use the following syntax, or format, for defining a function. The order of these elements matters. The fun word must come first, followed by the function name, followed by the inputs in parentheses, followed by curly braces around the function body.</p>
+<p class="image-container"><img alt="This diagram shows the syntax (or format) for declaring a function in Kotlin code. The function starts with the word &#34;fun&#34;. To the right of it is a box labeled name. To the right of the name box is a box labeled inputs, which is surrounded by parentheses. After the inputs is an opening curly brace. On the next line, there is a box labeled body, and it&#39;s indented to the right. At the bottom of the function, after the body, is a closing curly brace." style="width: 384.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/73ca17267dd721fa.png"></p>
+<p>Notice the key parts of a function within the main function example you saw in the Kotlin Playground:</p>
+<ul>
+<li>The function definition starts with the word <code translate="no" dir="ltr">fun</code>.</li>
+<li>Then the name of the function is <code translate="no" dir="ltr">main</code>.</li>
+<li>There are no inputs to the function, so the parentheses are empty.</li>
+<li>There is one line of code in the function body,  <code translate="no" dir="ltr">println("Hello, world!")</code>, which is located between the opening and closing curly braces of the function.</li>
+</ul>
+<p class="image-container"><img alt="The following main function code is shown in the image: fun main() {     println(&#34;Hello, world!&#34;) } There is a label called name that points to the word main. There is a label called inputs that points to the opening and closing parentheses symbols.  There is a label called body that points to the println(&#34;Hello, world!&#34;) line of code." style="width: 480.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/b36efb0db468aebd.png"></p>
+<p>Each part of the function is explained in more detail below.</p>
+<h3 is-upgraded id="function-keyword" data-text="Function keyword"><strong>Function keyword</strong></h3>
+<p>To indicate that you&#39;re about to define a function in Kotlin, use the special word <code translate="no" dir="ltr">fun</code> (short for function) on a new line. You must type <code translate="no" dir="ltr">fun</code> exactly as shown in all lowercase letters. You can&#39;t use func, function, or some alternative spelling because the Kotlin compiler won&#39;t recognize what you mean.</p>
+<p>These special words are called <em>keywords</em> in Kotlin and are reserved for a specific purpose, such as creating a new function in Kotlin.</p>
+<h3 is-upgraded id="function-name" data-text="Function name"><strong>Function name</strong></h3>
+<p>Functions have names so they can be distinguished from each other, similar to how people have names to identify themselves. The name of the function is found after the <code translate="no" dir="ltr">fun</code> keyword.</p>
+<p class="image-container"><img alt="This diagram shows the syntax (or format) for declaring a function in Kotlin code. The function starts with the word &#34;fun&#34;. To the right of it is a box labeled name. The name box is highlighted with a green border and background to bring emphasis to this part of the function definition. To the right of the name box is a box labeled inputs, which is surrounded by parentheses. After the inputs is an opening curly brace. On the next line, there is a box labeled body, and it&#39;s indented to the right. At the bottom of the function, after the body, is a closing curly brace." style="width: 384.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/e3f1f10da1e9b6de.png"></p>
+<p>Choose an appropriate name for your function based on the purpose of the function. The name is usually a verb or verb phrase. It&#39;s recommended to avoid using a  <a href="https://kotlinlang.org/docs/keyword-reference.html" target="_blank">Kotlin keyword</a> as a function name.</p>
+<p>Function names should follow the <em>camel case</em> convention, where the first word of the function name is all lower case. If there are multiple words in the name, there are no spaces between words, and all other words should begin with a capital letter.</p>
+<p>Example function names:</p>
+<ul>
+<li><code translate="no" dir="ltr">calculateTip</code></li>
+<li><code translate="no" dir="ltr">displayErrorMessage</code></li>
+<li><code translate="no" dir="ltr">takePhoto</code></li>
+</ul>
+<h3 is-upgraded id="function-inputs" data-text="Function inputs"><strong>Function inputs</strong></h3>
+<p>Notice that the function name is always followed by parentheses. These parentheses are where you list inputs for the function.</p>
+<p class="image-container"><img alt="This diagram shows the syntax (or format) for declaring a function in Kotlin code. The function starts with the word &#34;fun&#34;. To the right of it is a box labeled name. To the right of the name box is a box labeled inputs, which is surrounded by parentheses. The inputs box is highlighted with a green border and background to bring emphasis to this part of the function. After the inputs is an opening curly brace. On the next line, there is a box labeled body, and it&#39;s indented to the right. At the bottom of the function, after the body, is a closing curly brace." style="width: 384.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/95b05d9facdea45e.png"></p>
+<p>An input is a piece of data that a function needs to perform its purpose. When you define a function, you can require that certain inputs be passed in when the function is called. If there are no inputs required for a function, the parentheses are empty <code translate="no" dir="ltr">()</code>.</p>
+<p>Here are some examples of functions with a different number of inputs:</p>
+<p>The following diagram shows a function that is called <code translate="no" dir="ltr">addOne</code>. The purpose of the function is to add 1 to a given number. There is one input, which is the given number. Inside the function body, there is code that adds 1 to the number passed into the function.</p>
+<p class="image-container"><img alt="This diagram represents a function as a black box with the label &#34;addOne&#34; on it, which is the function name. Within the function box is a smaller box, representing the function body. Inside the function body box, there is text that says &#34;number + 1&#34;. Outside the function black box, there is a box labeled &#34;number&#34; with an arrow pointing into the function black box. The number is an input to the function. " style="width: 624.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/db0d1f4818833cdd.png"></p>
+<p>In this next example, there is a function called <code translate="no" dir="ltr">printFullName</code>. There are two inputs required for the function, one for the first name and one for the last name. The function body prints out the first name and last name in the output, to display the person&#39;s full name.</p>
+<p class="image-container"><img alt="This diagram represents a function as a black box with the label &#34;printFullName&#34; on it, which is the function name. Within the function box is a smaller box, representing the function body. Inside the function body box, there is text that says &#34;Print firstName and lastName in the output&#34;. Outside the function black box, there are two boxes labeled &#34;firstName&#34; and &#34;lastName&#34; respectively. There are arrows from the firstName and lastName boxes pointing into the function black box. firstName and lastName are two inputs to the function. " style="width: 624.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/63b02f353b2b162e.png"></p>
+<p>This last example shows a function that doesn&#39;t require any inputs to be passed in when the function is called. When you call the <code translate="no" dir="ltr">displayHello()</code> function, a Hello message gets printed to the output.</p>
+<p class="image-container"><img alt="This diagram represents a function as a black box with the label &#34;displayHello&#34; on it, which is the function name. Within the function box is a smaller box, representing the function body. Inside the function body box, there is text that says &#34;Print Hello in the output&#34;. " style="width: 384.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/c87980767d5905f3.png"></p>
+<h3 is-upgraded id="function-body" data-text="Function body"><strong>Function body</strong></h3>
+<p>The <em>function body</em> contains the instructions needed to achieve the purpose of the function. You can locate the function body by looking for the lines of code enclosed within the opening and closing curly braces.</p>
+<p class="image-container"><img alt="This diagram shows the syntax (or format) for declaring a function in Kotlin code. The function starts with the word &#34;fun&#34;. To the right of it is a box labeled name. To the right of the name box is a box labeled inputs, which is surrounded by parentheses. After the inputs is an opening curly brace. On the next line, there is a box labeled body, and it&#39;s indented to the right. The body box is highlighted with a green border and background to bring emphasis to this part of the function. At the bottom of the function, after the body, is a closing curly brace." style="width: 384.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/1caf0b0436e734e.png"></p>
+<h2 is-upgraded id="simple-program-explained" data-text="Simple program explained"><strong>Simple program explained</strong></h2>
+<p>Look back at the simple program that you saw earlier in the codelab.</p>
+<p class="image-container"><img alt="The following main function code is shown in the image: fun main() {     println(&#34;Hello, world!&#34;) } There is a label called name that points to the word main. There is a label called inputs that points to the opening and closing parentheses symbols.  There is a label called body that points to the println(&#34;Hello, world!&#34;) line of code." style="width: 480.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/b36efb0db468aebd.png"></p>
+<p>The program contains one function: the main function. main is a special function name in Kotlin. When you&#39;re writing your code in the Kotlin Playground, your code should be written inside the <code translate="no" dir="ltr">main()</code> function or called from the <code translate="no" dir="ltr">main()</code> function.</p>
+<p>There&#39;s only one line of code in the body of this <code translate="no" dir="ltr">main()</code> function:</p>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">println(&#34;Hello, world!&#34;)
+</code></pre>
+<p>This line of code is a <em>statement</em> because it performs a specific action, which is to print the <code translate="no" dir="ltr">Hello, world!</code> text in the output pane. More specifically, the <code translate="no" dir="ltr">println()</code> function is being called on this line of code.  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html" target="_blank"><code translate="no" dir="ltr">println()</code></a> is a function that&#39;s already defined in the Kotlin language. That means the team of engineers who created the Kotlin language already wrote out the function declaration for the <code translate="no" dir="ltr">println()</code> function. The function requires one input, which is the message that should be printed.</p>
+<p>When you call the <code translate="no" dir="ltr">println()</code> function, place the message text within parentheses after the function name. Be sure to use quotation marks around the text to display, such as <code translate="no" dir="ltr">"Hello, world!"</code>.</p>
+<p>When the program is executed, the message that was passed into the <code translate="no" dir="ltr">println()</code> function is printed to the output:</p>
+<pre translate="no" dir="ltr">Hello, world!
+</pre>
+<h2 is-upgraded id="try-it" data-text="Try it"><strong>Try it</strong></h2>
+<p>Now look back at the original code in the program. Can you modify the code in the Kotlin Playground so that the output shows this message instead?</p>
+<pre translate="no" dir="ltr">Hello, Android!
+</pre>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Modify your program" duration="5" step="5">
+          
+          <h2 class="step-title" id="5" data-text="Modify your program">
+              6. Modify your program
+          </h2>
+          <ol type="1">
+<li>In order to change the message that&#39;s displayed in the output, modify the <code translate="no" dir="ltr">println()</code> function call on the second line of the program. Replace <code translate="no" dir="ltr">world</code> with <code translate="no" dir="ltr">Android</code> in the <code translate="no" dir="ltr">println()</code> function. Make sure that <code translate="no" dir="ltr">"Hello, Android!"</code> is still within quotation marks and within the parentheses.</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Hello, Android!&#34;)
+}
+</code></pre>
+<ol type="1" start="2">
+<li>Run the program.</li>
+<li>The output should show this message:</li>
+</ol>
+<pre translate="no" dir="ltr">Hello, Android!
+</pre>
+<p>Nice job, you modified your first program!</p>
+<p>Now can you change your code so that the message gets printed twice? See the desired output:</p>
+<pre translate="no" dir="ltr">Hello, Android!
+Hello, Android!
+</pre>
+<h2 is-upgraded id="print-more-than-one-message" data-text="Print more than one message"><strong>Print more than one message</strong></h2>
+<p>You can put as many lines of instructions inside a function as you need to accomplish a task. However, note that there should only be one statement per line in Kotlin. If you want to write another statement, put it on a new line of the function.</p>
+<p>To change your program to print multiple lines of text:</p>
+<ol type="1">
+<li>Copy the initial <code translate="no" dir="ltr">println()</code> statement and paste the second statement below it within the function body. Both <code translate="no" dir="ltr">println()</code> statements must be contained within the curly braces of the main function. Now you have two statements within the function body.</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Hello, Android!&#34;)
+    println(&#34;Hello, Android!&#34;)
+}
+</code></pre>
+<ol type="1" start="2">
+<li>Run the program.</li>
+<li>When you run your program, the output should be:</li>
+</ol>
+<pre translate="no" dir="ltr">Hello, Android!
+Hello, Android!
+</pre>
+<p>You can see how changes to the code affects the output.</p>
+<ol type="1" start="4">
+<li>Change the code so that it says <code translate="no" dir="ltr">Hello,</code> <em><code translate="no" dir="ltr">YOUR_NAME</code></em><code translate="no" dir="ltr">!</code>.</li>
+</ol>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Kotlin style guide" duration="5" step="6">
+          
+          <h2 class="step-title" id="6" data-text="Kotlin style guide">
+              7. Kotlin style guide
+          </h2>
+          <p>Throughout this course, you&#39;ll learn about good coding practices to follow as an Android developer. One such practice is to follow Google&#39;s Android coding standards for code written in Kotlin. The complete guide is called a style guide and explains how code should be formatted in terms of visual appearance and the conventions to follow when writing your code. For example, the style guide includes recommendations on use of whitespace, indentation, naming, and more.</p>
+<p>The purpose of following the style guide is to make your code easier to read and more consistent with how other Android developers write their code. This consistency is important when collaborating on large projects together, so that the style of code is the same throughout all the files in the project.</p>
+<p>Here are some of the relevant style guide recommendations for what you&#39;ve learned in Kotlin so far:</p>
+<ul>
+<li>Function names should be in camel case and should be verbs or verb phrases.</li>
+<li>Each statement should be on its own line.</li>
+<li>The opening curly brace should appear at the end of the line where the function begins.</li>
+<li>There should be a space before the opening curly brace.</li>
+</ul>
+<p class="image-container"><img alt="The following main function code is shown in the image: fun main() {     println(&#34;Hello, world!&#34;) } There is a label called space that points to the space after the parentheses symbols and before the opening curly brace." style="width: 432.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/30a25c97d13c9847.png"></p>
+<ul>
+<li>The function body should be indented in by 4 spaces. Do not use a tab character to indent your code, type in 4 spaces.</li>
+</ul>
+<p class="image-container"><img alt="The following main function code is shown in the image: fun main() {     println(&#34;Hello, world!&#34;) } There is an arrow that points to the line of code in the function body: println(&#34;Hello, world!&#34;). The arrow has a label that says: indent by 4 spaces." style="width: 432.00px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/c66edcaaa1f7c8b3.png"></p>
+<ul>
+<li>The closing curly brace is on its own line after the last line of code in the function body. The closing brace should line up with the <code translate="no" dir="ltr">fun</code> keyword at the beginning of the function.</li>
+</ul>
+<p class="image-container"><img alt="The following main function code is shown in the image: fun main() {     println(&#34;Hello, world!&#34;) } There is a vertical line that appears on the left edge of the function code. It is located to the left of the word fun and extends all the way vertically down past the closing curly brace of the function. The vertical line has a label that says: aligned vertically. The line is meant to indicate that the word fun and the closing curly brace should be vertically aligned. " style="width: 412.80px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/a1b79391d254812e.png"></p>
+<p>You will learn more Android coding conventions as you build your knowledge in Kotlin. The full style guide is  <a href="https://developer.android.com/kotlin/style-guide" target="_blank">here</a>, but don&#39;t worry that it covers other topics in Kotlin you haven&#39;t learned yet.</p>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Fix errors in your code" duration="5" step="7">
+          
+          <h2 class="step-title" id="7" data-text="Fix errors in your code">
+              8. Fix errors in your code
+          </h2>
+          <p>When you learn a human language, there are rules of syntax and grammar for the correct way to use words and form sentences. Similarly, for programming languages, there are specific rules for what makes valid code, which means code that compiles successfully.</p>
+<p>A normal part of the coding process involves making mistakes and accidentally writing invalid code. As a beginner, it may be confusing or overwhelming to encounter these mistakes. But don&#39;t worry, this is expected. Code rarely works perfectly the first time that it&#39;s written. Just like how writing a document takes many drafts, writing code can take many iterations until it works as expected.</p>
+<p>If the code can&#39;t compile successfully, there&#39;s an error. For example, if you have a typo, such as a missing quotation mark or parenthesis, the compiler won&#39;t understand your code and can&#39;t translate it into steps for the computer to perform. If your code doesn&#39;t work as expected, or you see an error message in your code editor, you have to go back to your code and fix it. The process of solving these errors is called <em>troubleshooting</em>.</p>
+<ol type="1">
+<li>Copy and paste the following code snippet into the Kotlin Playground and run the program. What do you see?</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Today is sunny!)
+}
+</code></pre>
+<p>Ideally, you want to see the message <code translate="no" dir="ltr">Today is sunny!</code> displayed. Instead, in the output pane, you see exclamation point icons with error messages.</p>
+<p class="image-container"><img alt="There are 2 error messages from running the program: Expecting &#34; Expecting ) There is an exclamation mark on a red circle next to the left of each error." style="width: 243.50px" src="/static/codelabs/basic-android-kotlin-compose-first-program/img/1ca2900cabc7571e.png"></p>
+<p><em>Error message from Kotlin Playground</em></p>
+<p>The error messages start with the word &#34;Expecting&#34; because the Kotlin compiler is &#34;expecting&#34; something but not finding it in the code. In this case, the compiler is expecting a closing quotation mark and a closing parenthesis for the code on the second line of your program.</p>
+<p>In the <code translate="no" dir="ltr">println()</code> statement, notice that the message to display has an opening quotation mark, but no closing quotation mark. Even though there is a closing parenthesis in the code, the compiler thinks the parenthesis is part of the text to print because there is no closing quotation mark before it.</p>
+<ol type="1" start="2">
+<li>Add the closing quotation mark after the exclamation point, before the closing parenthesis.</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Today is sunny!&#34;)
+}
+</code></pre>
+<p>The main function contains one line of code, which is a <code translate="no" dir="ltr">println()</code> statement, where the text is enclosed in quotation marks and placed within the parentheses:  ​​<code translate="no" dir="ltr">"Today is sunny!"</code>.</p>
+<ol type="1" start="3">
+<li>Run the program again.</li>
+</ol>
+<p>There shouldn&#39;t be any errors and the output pane should display this text:</p>
+<pre translate="no" dir="ltr">Today is sunny!
+</pre>
+<p>Good work on fixing the error! Once you gain more experience in writing code and troubleshooting errors, you&#39;ll realize how important it is to pay attention to capitalization, spelling, spacing, symbols, and names when you&#39;re typing your code.</p>
+<p>In the next section, you work on a series of exercises to practice what you&#39;ve learned. Solutions are provided at the end of the codelab, but try your best to find the answer on your own first.</p>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Exercises" duration="15" step="8">
+          
+          <h2 class="step-title" id="8" data-text="Exercises">
+              9. Exercises
+          </h2>
+          <ol type="1">
+<li>Can you read the code in this program and guess what the output is (without running it in Kotlin Playground)?</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;1&#34;)
+    println(&#34;2&#34;)
+    println(&#34;3&#34;)
+}
+</code></pre>
+<p>Once you have a guess, copy and paste this code into the Kotlin Playground to check your answer.</p>
+<ol type="1" start="2">
+<li>Use the Kotlin Playground to create a program that outputs the following messages:</li>
+</ol>
+<pre translate="no" dir="ltr">I&#39;m
+learning
+Kotlin!
+</pre>
+<ol type="1" start="3">
+<li>Copy and paste this program into the Kotlin Playground.</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Tuesday&#34;)
+    println(&#34;Thursday&#34;)
+    println(&#34;Wednesday&#34;)
+    println(&#34;Friday&#34;)
+    println(&#34;Monday&#34;)
+}
+</code></pre>
+<p>Fix the program so that it prints this output:</p>
+<pre translate="no" dir="ltr">Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+</pre>
+<p>For some early practice on troubleshooting, fix the errors in the following exercises. For each exercise, copy the code into the Kotlin Playground in your browser. Try to run the program and you&#39;ll see an error message appear.</p>
+<ol type="1" start="4">
+<li>Fix the error in this program, so that it produces the desired output.</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Tomorrow is rainy&#34;)
+</code></pre>
+<p>Desired output:</p>
+<pre translate="no" dir="ltr">Tomorrow is rainy
+</pre>
+<ol type="1" start="5">
+<li>Fix the error in this program, so that it produces the desired output.</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    printLine(&#34;There is a chance of snow&#34;)
+}
+</code></pre>
+<p>Desired output:</p>
+<pre translate="no" dir="ltr">There is a chance of snow
+</pre>
+<ol type="1" start="6">
+<li>Fix the error in this program, so that it produces the desired output.</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Cloudy&#34;) println(&#34;Partly Cloudy&#34;) println(&#34;Windy&#34;)
+}
+</code></pre>
+<p>Desired output:</p>
+<pre translate="no" dir="ltr">Cloudy
+Partly Cloudy
+Windy
+</pre>
+<ol type="1" start="7">
+<li>Fix the error in this program, so that it produces the desired output.</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() (
+    println(&#34;How&#39;s the weather today?&#34;)
+)
+</code></pre>
+<p>Desired output:</p>
+<pre translate="no" dir="ltr">How&#39;s the weather today?
+</pre>
+<p>After you complete these exercises, check your answers against the solutions in the next section.</p>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Solutions" duration="12" step="9">
+          
+          <h2 class="step-title" id="9" data-text="Solutions">
+              10. Solutions
+          </h2>
+          <ol type="1">
+<li>The output of the program is:</li>
+</ol>
+<pre translate="no" dir="ltr">1
+2
+3
+</pre>
+<ol type="1" start="2">
+<li>The code in your program should look like:</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;I&#39;m&#34;)
+    println(&#34;learning&#34;)
+    println(&#34;Kotlin!&#34;)
+}
+</code></pre>
+<ol type="1" start="3">
+<li>This is the correct code for the program:</li>
+</ol>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Monday&#34;)
+    println(&#34;Tuesday&#34;)
+    println(&#34;Wednesday&#34;)
+    println(&#34;Thursday&#34;)
+    println(&#34;Friday&#34;)
+}
+</code></pre>
+<ol type="1" start="4">
+<li>The closing curly brace that indicates the end of the function body for the <code translate="no" dir="ltr">main</code> function is missing on the third line of the program.</li>
+</ol>
+<p>Correct code:</p>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Tomorrow is rainy&#34;)
+}
+</code></pre>
+<p>Output:</p>
+<pre translate="no" dir="ltr">Tomorrow is rainy
+</pre>
+<ol type="1" start="5">
+<li>When you run the program, you see an <code translate="no" dir="ltr">Unresolved reference: printLine</code> error. This is because <code translate="no" dir="ltr">printLine()</code> isn&#39;t a recognized function in Kotlin. You can also see the part of the code causing the error highlighted in red in the Kotlin Playground. Change the function name to <code translate="no" dir="ltr">println</code> to print a line of text to the output, which fixes the error.</li>
+</ol>
+<p>Correct code:</p>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;There is a chance of snow&#34;)
+}
+</code></pre>
+<p>Output:</p>
+<pre translate="no" dir="ltr">There is a chance of snow
+</pre>
+<ol type="1" start="6">
+<li>When you run the program, you see an <code translate="no" dir="ltr">Unresolved reference: println</code> error. This message doesn&#39;t directly say how to fix the problem. This can sometimes happen when you troubleshoot an error, and it requires you to take a deeper look at the code to resolve the unexpected behavior.</li>
+</ol>
+<p>Upon closer look, the second <code translate="no" dir="ltr">println()</code> function call in the code is red, which signals that&#39;s where the problem is. Kotlin expects just one statement on each line. In this case, you can move the second and third <code translate="no" dir="ltr">println()</code> function calls onto separate new lines to solve the issue.</p>
+<p>Correct code:</p>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;Cloudy&#34;)
+    println(&#34;Partly Cloudy&#34;)
+    println(&#34;Windy&#34;)
+}
+</code></pre>
+<p>Output:</p>
+<pre translate="no" dir="ltr">Cloudy
+Partly Cloudy
+Windy
+</pre>
+<ol type="1" start="7">
+<li>If you run the program, you see the error: <code translate="no" dir="ltr">Function 'main' must have a body</code>. A function body should be enclosed within an opening curly brace and a closing curly brace { }, not opening and closing parentheses ( ).</li>
+</ol>
+<p>Correct code:</p>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">fun main() {
+    println(&#34;How&#39;s the weather today?&#34;)
+}
+</code></pre>
+<p>Output:</p>
+<pre translate="no" dir="ltr">How&#39;s the weather today?
+</pre>
+
+
+        </google-codelab-step>
+      
+        <google-codelab-step label="Conclusion" duration="1" step="10">
+          
+          <h2 class="step-title" id="10" data-text="Conclusion">
+              11. Conclusion
+          </h2>
+          <p>Great job on completing this introduction to Kotlin!</p>
+<p>You worked with simple programs in Kotlin and ran them to see text printed to the output. You modified the programs in different ways and observed how those changes affected the output. It&#39;s normal to make mistakes when programming, so you also began to learn about how to troubleshoot and correct errors in your code, which is an important skill that will help you in the future.</p>
+<p>Move on to the next codelab to learn how to use variables in Kotlin so that you can create more interesting programs!</p>
+<h2 is-upgraded id="summary" data-text="Summary">Summary</h2>
+<ul>
+<li>A Kotlin program requires a main function as the entry point of the program.</li>
+<li>To define a function in Kotlin, use the <code translate="no" dir="ltr">fun</code> keyword, followed by the name of the function, any inputs enclosed in parentheses, followed by the function body enclosed in curly braces.</li>
+<li>The name of a function should follow camel case convention and start with a lowercase letter.</li>
+<li>Use the <code translate="no" dir="ltr">println()</code> function call to print some text to the output.</li>
+<li>Refer to the Kotlin style guide for formatting and code conventions to follow when coding in Kotlin.</li>
+<li>Troubleshooting is the process of resolving errors in your code.</li>
+</ul>
+<h2 is-upgraded id="learn-more" data-text="Learn more">Learn more</h2>
+<ul>
+<li><a href="https://play.kotlinlang.org/byExample/01_introduction/01_Hello%20world" target="_blank">Hello World</a></li>
+<li><a href="https://kotlinlang.org/docs/basic-syntax.html#program-entry-point" target="_blank">Program entry point</a></li>
+<li><a href="https://kotlinlang.org/docs/basic-syntax.html#print-to-the-standard-output" target="_blank">Print to the standard output</a></li>
+<li><a href="https://kotlinlang.org/docs/basic-syntax.html#functions" target="_blank">Functions</a></li>
+<li><a href="https://kotlinlang.org/docs/keyword-reference.html" target="_blank">Keywords and operators</a></li>
+<li><a href="https://kotlinlang.org/docs/functions.html" target="_blank">Functions</a></li>
+<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html" target="_blank"><code translate="no" dir="ltr">println()</code></a></li>
+<li><a href="https://developer.android.com/kotlin/style-guide" target="_blank">Kotlin style guide</a></li>
+</ul>
+
+
+        </google-codelab-step>
+      
+    </google-codelab>
+  
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+
+<nav class="devsite-footer-promos nocontent" aria-label="Promotions">
+  <ul class="devsite-footer-promos-list">
+    
+    <li class="devsite-footer-promo">
+      <a href="//twitter.com/AndroidDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="Footer Twitter Promo"
+       >
+        
+        
+          
+            <img class="devsite-footer-promo-icon"
+                 src="/_static/android/images/logo-twitter.svg"
+                 loading="lazy"
+                 alt="Twitter">
+          
+        
+        Twitter
+      </a>
+      <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="//www.youtube.com/user/androiddevelopers"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="Footer YouTube Promo"
+       >
+        
+        
+          
+            <img class="devsite-footer-promo-icon"
+                 src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png"
+                 loading="lazy"
+                 alt="YouTube">
+          
+        
+        YouTube
+      </a>
+      <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="//www.linkedin.com/showcase/androiddev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="Footer LinkedIn Promo"
+       >
+        
+        
+          
+            <img class="devsite-footer-promo-icon"
+                 src="/_static/android/images/logo-linkedin.svg"
+                 loading="lazy"
+                 alt="LinkedIn">
+          
+        
+        LinkedIn
+      </a>
+      <div class="devsite-footer-promo-description">Connect with the Android Developers community on LinkedIn</div>
+    </li>
+    
+  </ul>
+</nav>
+
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">More Android</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.android.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.android.com/enterprise/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Android for Enterprise
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.android.com/security-center/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Security
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//source.android.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Source
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/news"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            News
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//android-developers.googleblog.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/podcasts"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+              
+              
+            
+          
+            Podcasts
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Discover</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/games"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Gaming
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/ml"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Machine Learning
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/privacy"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Privacy
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/training/connectivity/5g"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            5G
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Android Devices</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/large-screens"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Large screens
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/wear"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Wear OS
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/tv"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Android TV
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/cars"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Android for cars
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/things"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Android Things
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/chrome-os"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            Chrome OS devices
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Releases</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/about/versions/11"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android 11
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/about/versions/10"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Android 10
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/about/versions/pie"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Pie
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/about/versions/oreo"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Oreo
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/about/versions/nougat"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Nougat
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/about/versions/marshmallow"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Marshmallow
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/about/versions/lollipop"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Lollipop
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/about/versions/kitkat"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            KitKat
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Documentation and Downloads</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/studio/intro"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android Studio guide
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/guide"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Developers guides
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/reference"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            API reference
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/studio"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Download Studio
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/ndk"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            Android NDK
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Support</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Report platform bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//issuetracker.google.com/issues/new?component=192697"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Report documentation bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//support.google.com/googleplay/android-developer"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Play support
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://userresearch.google.com/developer/?utm_source=Website&amp;Q_Language=en&amp;utm_campaign=Q3&amp;campaignDate=August2022&amp;referral_code=UXRpSWH2922287"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Join research studies
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        <source srcset="https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/images/lockup-developers-dark-theme.svg"
+                media="(prefers-color-scheme: none)"
+                class="devsite-dark-theme"
+                loading="lazy"
+                alt="Google Developers">
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/images/lockup-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developers.google.com/products/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/license"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer License link"
+         >
+          License
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/distribute/marketing-tools/brand-guidelines"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Brand guidelines link"
+         >
+          Brand guidelines
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+        
+        <span class="devsite-footer-utility-description">Get news and tips by email</span>
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/updates"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          Subscribe
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        
+          aria-current="true">English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Bahasa Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension11&#34;: false, &#34;dimension5&#34;: &#34;en&#34;, &#34;dimension3&#34;: false, &#34;dimension1&#34;: &#34;Signed In&#34;, &#34;dimension6&#34;: &#34;en&#34;}, &#34;gaid&#34;: &#34;UA-5831155-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}}]</script>
+<script type="application/json" gtm>{&#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;codelab&#34;, &#34;projectName&#34;: null, &#34;signedIn&#34;: &#34;True&#34;, &#34;tenant&#34;: &#34;android&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}, &#34;tags&#34;: []}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+<android-fully-clickable
+    target="
+        .android-grouped-resources .devsite-landing-row-item,
+        .android-illustrated-resources-index .devsite-landing-row-item,
+        .android-illustrated-resources-primary .devsite-landing-row-item,
+        .android-illustrated-resources-secondary .devsite-landing-row-item,
+        .android-illustrated-resources-secondary-small .devsite-landing-row-item,
+        .android-illustrated-resources-tertiary .devsite-landing-row-item,
+        .android-illustrated-resources-tertiary-small .devsite-landing-row-item,
+        .android-promo .devsite-landing-row-item,
+        .android-quick-link,
+        .android-samples .devsite-card-wrapper,
+        .fully-clickable"
+    watch=".android-samples, devsite-content"></android-fully-clickable>
+    <script nonce="BBHRgVgsSDQU9o9C3ZyrlOqJl31bJL">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/js/app_loader.js', '[3,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6","https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android","https://android-dot-devsite-v2-prod.appspot.com",1,null,["/_pwa/android/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v3d59008e544647a0ef15b3aa6144afaaec4bb33821f37d7fece1fe7311821ed6/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,111,112,113,115,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,144,147,148,149,150,151,152,154,155,156,157,158,159,161,163,164,165,168,169,170,172,173,179,180,182,183,186,190,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developer.android.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Profiles__enable_profile_collections","Experiments__reqs_query_experiments","Experiments__enable_experiments","Profiles__enable_developer_profiles_interests","Badges__enable_drag_and_drop_badges","MiscFeatureFlags__enable_tls_version_for_gaia_calls","Profiles__enable_public_developer_profiles","MiscFeatureFlags__enable_footprints_record_views","Search__enable_page_map","Cloud__enable_cloud_shell_fte_user_flow","Search__enable_acl_suggestions","MiscFeatureFlags__emergency_css","Profiles__enable_page_saving","BookNav__enable_collapsible_book_nav","Cloud__enable_cloud_dlp_service","Significatio__enable_by_tenant","BookNav__enable_book_nav_filtering","Profiles__enable_profile_notifications_ui","Profiles__enable_developer_profiles_dashboard_recommendations","Cloud__enable_cloud_shell","SignIn__enable_auto_signin_oauth","Search__enable_suggestions_from_borg","Profiles__enable_developer_profiles_callout","Search__enable_devsite_serp","Significatio__enable_experiment_id_caching","Cloud__enable_cloud_shell_button_rich_tooltip","Profiles__require_profile_eligibility_for_signin","Badges__enable_delete_badges","Cloud__enable_cloudx_experiment_ids"]]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>
